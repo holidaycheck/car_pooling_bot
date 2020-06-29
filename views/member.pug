@@ -1,0 +1,46 @@
+extends layout
+
+block content
+    section(class="section")
+        div(class="container")
+            .level-left.box
+                div(class="subtitle")
+                    p= 'Slack ID: ' + journeys[0].slack_id
+                    br
+                    p= 'Slack Name : ' + journeys[0].slack_realname
+                    br
+                    p= 'Slack Email : ' + journeys[0].slack_email
+                    br
+                    p= 'Journeys Number : ' + journeys.length + ' Journeys'
+                    br
+
+            .level-left.box
+              .subtitle journeys :
+                br
+
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Journey ID</th>
+                      <th>From</th>
+                      <th>To</th>
+                      <th>Date/Time</th>
+                      <th>Persons</th>
+                      <th>View</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    each journey in journeys 
+                      <tr>
+                        th= journey.uuid
+                        th= journey.from_location
+                        th= journey.to_location
+                        th= journey.time
+                        th= journey.person_count
+                        <th>
+                          a(href="/view/" + journey.uuid) view
+                        </tr>
+                      </tr>
+                  </tbody>
+                </table>
+                    

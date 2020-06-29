@@ -1,0 +1,11 @@
+,
+  "accessory": {
+      "type": "button",
+      "text": {
+          "type": "plain_text",
+          "text": "{{name}}",
+          "emoji": true
+      },
+      "style": "{{color}}",
+      "value": "{{join_leave}}_journey_{{journey_id}}"
+  }

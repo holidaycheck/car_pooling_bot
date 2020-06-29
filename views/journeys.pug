@@ -1,0 +1,35 @@
+extends layout
+
+block content
+    section(class="section")
+        div(class="container has-text-centered")
+          .container
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Journey ID</th>
+                    <th>Journey Creator</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Date/Time</th>
+                    <th>Persons</th>
+                    <th>joined</th>
+                    <th>View</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  each journey in journeys 
+                    <tr>
+                      th= journey.journeyID
+                      th= journey.slack_realname
+                      th= journey.from_location
+                      th= journey.to_location
+                      th= journey.time
+                      th= journey.person_count
+                      th= journey.joins
+                      <th>
+                        a(href="/journeys/" + journey.journeyID) view
+                      </tr>
+                    </tr>
+                </tbody>
+              </table>

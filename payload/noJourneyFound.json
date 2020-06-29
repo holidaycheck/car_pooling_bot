@@ -1,0 +1,9 @@
+{
+    "type": "section",
+    "fields": [
+        {
+            "type": "mrkdwn",
+            "text": "*There is no Journeys*"
+        }
+    ]
+}

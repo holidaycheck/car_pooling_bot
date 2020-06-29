@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    section(class="section")
+        div(class="container")
+            form(action="", method="post")
+                .field
+                    .label='Delete message that will be send to journey members (optional)'
+                    .control
+                        textarea.is-rounded(class="textarea" name="delete_message" placeholder="Write delete message here")
+                .field
+                    button.button.is-danger.is-fullwidth Delete

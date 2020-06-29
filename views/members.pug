@@ -1,0 +1,27 @@
+extends layout
+
+block content
+    section(class="section")
+        div(class="container has-text-centered")
+          .container
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Slack Name</th>
+                    <th>Slack Email</th>
+                    <th>Journeys</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  each member in members 
+                    <tr>
+                      th= member.slack_id
+                      th= member.slack_realname
+                      th= member.slack_email
+                      <th>
+                        a(href="/members/" + member.slack_id) View Journeys
+                      </tr>
+                    </tr>
+                </tbody>
+              </table>

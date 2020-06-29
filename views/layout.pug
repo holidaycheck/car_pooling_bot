@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+    head
+        title='CarPoolingBot'
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        meta(name="description" content="")
+        meta(name="author" content="")
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css")
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-switch@2.0.0/dist/css/bulma-switch.min.css")
+    body
+        .container.is-fluid
+            nav.navbar
+                .container
+                    .navbar-brand
+                        a.navbar-item(href="/") Car Pooling
+                        a.navbar-item(href="/members") Members
+                        a.navbar-item.is-success(href="/new_journey") New Journey
+                        a.navbar-item.is-success(href="/logout") Logout
+block content

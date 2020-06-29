@@ -1,0 +1,43 @@
+extends layout
+
+block content
+    section(class="section")
+        div(class="container")
+            .level-left.box
+                div(class="subtitle")
+                    p= 'Journey Creator: ' + journeyInfo.journeyCreator
+                    br
+                    p= 'Created at : ' + journeyInfo.create_time
+                    br
+                    p= 'Start at : ' + journeyInfo.time
+                    br
+                    p= 'From : ' + journeyInfo.from_location
+                    br
+                    p= 'To : ' + journeyInfo.to_location
+                    br
+                    p= 'Person Count : ' + journeyInfo.person_count
+                    br
+                    p= 'Joined Persons : ' + journeyInfo.joins.length
+
+            .level-left.box
+              .subtitle Journey Members :
+                br
+
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Joined Person</th>
+                        <th>Jointed At</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      each join in journeyInfo.joins 
+                        <tr>
+                          th= join.realName
+                          th= join.join_at
+                        </tr>
+                    </tbody>
+                </table>
+            if (canDelete) 
+              a.button.is-danger(href="/delete/" + journeyInfo.uuid) Delete This Journey
+                    

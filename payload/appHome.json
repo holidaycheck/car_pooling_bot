@@ -1,0 +1,59 @@
+{
+	"type": "home",
+	"blocks": [
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "*#CarPoolingBot*"
+			}
+		},
+		{
+			"type": "image",
+			"image_url": "https://meto.xyz/logo-carpooling2x.png",
+			"alt_text": "HolidayCheck"
+		},
+        {
+			"type": "actions",
+			"elements": [
+				{
+					"type": "button",
+				"text": {
+					"type": "plain_text",
+					"text": "Create New Journey",
+					"emoji": true
+				},
+				"style": "primary",
+				"value": "create_journey"
+				},
+				{
+					"type": "button",
+				"text": {
+					"type": "plain_text",
+					"text": "Find a Journey To Join",
+					"emoji": true
+				},
+				"value": "load_exists_journey"
+				},
+				{
+					"type": "button",
+				"text": {
+					"type": "plain_text",
+					"text": "See my Journey",
+					"emoji": true
+				},
+				"value": "load_created_journey"
+				},
+				{
+					"type": "button",
+				"text": {
+					"type": "plain_text",
+					"text": "See joined journey",
+					"emoji": true
+				},
+				"value": "load_joined_journey"
+				}
+			]
+		}
+	]
+}

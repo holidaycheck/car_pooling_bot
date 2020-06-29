@@ -1,0 +1,20 @@
+{
+    "block_id": "block-{{block_id}}",
+    "type": "section",
+    "text": {
+        "type": "mrkdwn",
+        "text": "*({{journey_from}})* :arrow_right: *({{journey_to}})* -> By : {{journey_owner}}\n:spiral_calendar_pad: : {{journey_date}}\n:person_doing_cartwheel:  : {{journey_joins}}/{{journey_personCount}}\n"
+    }{{join_button}}
+},
+{
+    "type": "context",
+    "elements": [
+        {
+            "type": "mrkdwn",
+            "text": "{{users}}"
+        }
+    ]
+},
+{
+    "type": "divider"
+}

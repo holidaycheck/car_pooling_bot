@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    section(class="section")
+        div(class="container has-text-centered")
+            div(class="columns is-centered")
+                .column.is-7
+                    h1.title.is-1 404
+                    p.subtitle.is-3= error.status
+                    p= message
+            a.button.is-primary(href="/") Back to homepage

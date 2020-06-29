@@ -1,0 +1,224 @@
+{
+	"title": {
+		"type": "plain_text",
+		"text": "Back Journey",
+		"emoji": true
+	},
+	"submit": {
+		"type": "plain_text",
+		"text": "Create",
+		"emoji": true
+	},
+	"type": "modal",
+	"close": {
+		"type": "plain_text",
+		"text": "Cancel",
+		"emoji": true
+	},
+	"blocks": [
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "*Create Back Journey*"
+			}
+		},
+		{
+			"type": "divider"
+		},
+		{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*From :* {{from}}"
+				}
+			]
+		},
+		{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*To :* {{to}}"
+				}
+			]
+		},
+		{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*Date :* {{date}}"
+				}
+			]
+		},
+		{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*Time :* {{time}}"
+				}
+			]
+		},
+		{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*People Count :* {{personCount}}"
+				}
+			]
+		},
+		{
+			"block_id": "start",
+			"type": "input",
+			"element": {
+				"type": "datepicker",
+				"initial_date": "{todayDate}",
+				"placeholder": {
+					"type": "plain_text",
+					"text": "Select a date",
+					"emoji": true
+				}
+			},
+			"label": {
+				"type": "plain_text",
+				"text": "Journey start",
+				"emoji": true
+			}
+		},
+		{
+			"block_id": "startTime",
+			"type": "input",
+			"element": {
+				"type": "static_select",
+				"placeholder": {
+					"type": "plain_text",
+					"text": "Select the time",
+					"emoji": true
+				},
+				"options": [
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "06:00",
+							"emoji": true
+						},
+						"value": "6"
+					},
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "07:00",
+							"emoji": true
+						},
+						"value": "7"
+					},
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "08:00",
+							"emoji": true
+						},
+						"value": "8"
+					},
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "09:00",
+							"emoji": true
+						},
+						"value": "9"
+					},
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "10:00",
+							"emoji": true
+						},
+						"value": "10"
+					},
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "11:00",
+							"emoji": true
+						},
+						"value": "11"
+					},
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "12:00",
+							"emoji": true
+						},
+						"value": "12"
+					},
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "13:00",
+							"emoji": true
+						},
+						"value": "13"
+					},
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "14:00",
+							"emoji": true
+						},
+						"value": "14"
+					},
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "15:00",
+							"emoji": true
+						},
+						"value": "15"
+					},
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "17:00",
+							"emoji": true
+						},
+						"value": "17"
+					},
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "18:00",
+							"emoji": true
+						},
+						"value": "18"
+					},
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "19:00",
+							"emoji": true
+						},
+						"value": "19"
+					},
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "20:00",
+							"emoji": true
+						},
+						"value": "20"
+					}
+				]
+			},
+			"label": {
+				"type": "plain_text",
+				"text": "Time",
+				"emoji": true
+			}
+		}
+	]
+}

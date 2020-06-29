@@ -1,0 +1,22 @@
+{
+	"type": "modal",
+	"title": {
+		"type": "plain_text",
+		"text": "Information",
+		"emoji": true
+	},
+	"close": {
+		"type": "plain_text",
+		"text": "Close",
+		"emoji": true
+	},
+	"blocks": [
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "*{{message}} :heavy_check_mark:*"
+			}
+		}
+	]
+}

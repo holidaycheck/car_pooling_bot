@@ -1,0 +1,49 @@
+extends layout
+
+block content
+    section(class="section")
+        div(class="container")
+            if errors
+        
+                each error, errorKey in errors 
+                    div(style="border-radius: 25px; text-align: center;" class="notification is-light " + (errorKey == 'info' ? 'is-success' : 'is-danger'))
+                        p=errorKey + ' : ' + error
+            form(method="POST" class="box")
+                                .field
+                                    .label='From'
+                                    .control
+                                        input.input.is-rounded(type="text" name="from" placeholder="From" required)
+                                .field
+                                    .label='To'
+                                    .control
+                                        input.input.is-rounded(type="text" name="to" placeholder="To" required)
+                                .field
+                                    .label='Journey start'
+                                    .control
+                                        input.input.is-rounded(type="date" name="start" placeholder="Journey start" required)
+                                .field
+                                    .label='Start time'
+                                    .select.is-fullwidth
+                                        select.multiple(name="startTime" required)
+                                            option(value="")
+                                            option(value="6") 06:00
+                                            option(value="7") 07:00
+                                            option(value="8") 08:00
+                                            option(value="9") 09:00
+                                            option(value="10") 10:00
+                                            option(value="11") 11:00
+                                            option(value="12") 12:00
+                                            option(value="13") 13:00
+                                            option(value="14") 14:00
+                                            option(value="15") 15:00
+                                            option(value="16") 16:00
+                                            option(value="17") 17:00
+                                            option(value="18") 18:00
+                                            option(value="19") 19:00
+                                            option(value="20") 20:00
+                                .field
+                                    .label='The number of people that you can take with you'
+                                    .control
+                                        input.input.is-rounded(type="number" name="personCount" placeholder="Persons Count" required)
+                                .field
+                                    button.button.is-info.is-fullwidth(name="create_new_journey") Create Journey
